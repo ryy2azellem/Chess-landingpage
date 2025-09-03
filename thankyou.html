@@ -12,29 +12,63 @@
       font-family: Arial, sans-serif;
       padding: 50px;
     }
+
     h1 {
       text-shadow: 0 0 10px #ffd700;
     }
+
     p {
       margin-top: 20px;
+      font-size: 1.1em;
     }
+
+    .download-btn {
+      margin-top: 30px;
+      padding: 15px 25px;
+      font-size: 1.2em;
+      background-color: #d4af37;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ffd700, 0 0 30px #d4af37;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px #ffd700, 0 0 50px #d4af37;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
   </style>
+</head>
+<body>
+  <h1>Thank You!</h1>
+  <p>Your "Advance to Mastery Chess Puzzle" PDF is ready to download.</p>
+  <p>If it doesn’t start automatically, click the button below:</p>
+
+  <button class="download-btn">
+    <a href="Advance_to_Mastery_Chess_Puzzle.pdf" download>Download PDF</a>
+  </button>
+
+  <!-- Optional: auto-download attempt (may be blocked in some browsers) -->
   <script>
-    // Automatically download the PDF
     window.onload = function() {
       const link = document.createElement('a');
-      link.href = 'Advance_to_Mastery_Chess_Puzzle.pdf';  // Your PDF file
+      link.href = 'Advance_to_Mastery_Chess_Puzzle.pdf';
       link.download = 'Advance_to_Mastery_Chess_Puzzle.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
     }
   </script>
-</head>
-<body>
-  <h1>Thank You!</h1>
-  <p>Your "Advance to Mastery Chess Puzzle" PDF is downloading automatically.</p>
-  <p>If it doesn’t start, <a href="Advance_to_Mastery_Chess_Puzzle.pdf" download>click here</a>.</p>
 </body>
 </html>
+
 
